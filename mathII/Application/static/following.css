@@ -1,0 +1,28 @@
+
+/*------------------------------------------FOLLOWING-------------------------------------------*/
+  /* Styles for the title */
+  .FollowingH1 {
+    text-align: left;
+    margin-bottom: 10px;
+    margin-top: 10px;
+    margin-left: -135px;
+  }
+
+  /* Styles for the buttons container */
+  .FollowingButtons {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex;
+    margin-top: 20px;
+    margin-left: -180px;
+  }
+
+  /* Styles for individual result buttons */
+  .FollowingButtons li {
+    margin: 2px;
+  }
+
+  .followingNone {
+    margin-left: -135px;
+  }
+

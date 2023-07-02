@@ -1,0 +1,37 @@
+{% extends "base.html" %}
+{% block title %}
+Math Quiz
+{% endblock %}
+{% block content %}
+
+    <script defer src="../static/end.js"></script>
+
+
+    <div class="endH3">
+        <h3 id="question" >Congratulations you scored <span id="correct"></span> out of 10 questions correctly!</h3>
+    </div>
+    <div class="finalscore">
+        <h3>Score: <span id="score"></span></h3>
+    </div>
+
+
+    <ul class="endbuttons">
+        <li class="play_again">
+            <button id="playagain" type="submit" class="btn btn-primary XXL">PLAY AGAIN</button>
+        </li>
+        <li class="save_score">
+            <form action="/savescore" method="POST">
+                <button id ="savescore" type="submit" class="btn btn-primary XXL">SAVE SCORE</button>
+            </form>
+        </li>
+    </ul>
+
+
+
+
+
+
+
+
+
+{% endblock %}.

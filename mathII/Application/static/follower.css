@@ -1,0 +1,28 @@
+
+/*------------------------------------------FOLLOWER-------------------------------------------*/
+  /* Styles for the title */
+  .FollowerH1 {
+    text-align: left;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    margin-left: -135px;
+  }
+
+  /* Styles for the buttons container */
+  .FollowerButtons {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex;
+    margin-top: 20px;
+    margin-left: -180px;
+  }
+
+  /* Styles for individual result buttons */
+  .FollowerButtons li {
+    margin: 2px;
+  }
+
+  .followerNone {
+    margin-left: -135px;
+  }
+

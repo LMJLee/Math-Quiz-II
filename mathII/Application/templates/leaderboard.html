@@ -1,0 +1,43 @@
+{% extends "base.html" %}
+{% block title %}
+Leaderboard
+{% endblock %}
+{% block content %}
+<head>
+    <title>Scores</title>
+</head>
+<body>
+    <div class="highScore">
+        <h6>High Scores</h6>
+    </div>
+
+    <div class="leaderboard">
+        <table class="table">
+            <thead class ="thead-dark">
+                <tr align="center">
+                    <th>Rank</th>
+                    <th>Username</th>
+                    <th>Type</th>
+                    <th>Score</th>
+                    <th>Date</th>
+                </tr>
+                </thead>
+
+                {% for score in scores %}
+                    <tr class="table-light" align="center">
+                    <td>{{ loop.index }}</td>
+                    <td>{{ score.username }}</td>
+                    <td>{{ score.type }}</td>
+                    <td>{{ score.score }}</td>
+                    <td>{{ score.date.strftime('%Y-%m-%d %H:%M:%S') }}</td>
+                    </tr>
+                {% endfor %}
+                </thead>
+        </table>
+
+    </div>
+
+</body>
+
+
+{% endblock %}

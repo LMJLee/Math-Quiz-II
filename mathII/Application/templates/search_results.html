@@ -1,0 +1,46 @@
+{% extends "base.html" %}
+{% block title %}
+Search results
+{% endblock %}
+{% block content %}
+
+<script defer src="../static/search.js"></script>
+
+<div class="resultH1">
+  <h1>Search results</h1>
+</div>
+
+<div class="resultH4">
+  <h5>{{ lengthFinal }} results</h5>
+</div>
+
+{% if length > 0 %}
+
+<div class="resultButtons">
+  <ul style="list-style-type: none;">
+    {% for i in range(length) %}
+
+      {% if search[i].username != current_user.username %}
+        <li>
+          <button class="btn btn-light resultBtn"><a style="color:#000000;" href="{{ url_for('auth.profile', username=search[i].username) }}">{{ search[i].username }}</a></button>
+          {% if search[i].username in usernames %}
+          <button class="btn btn-primary FollowUnfollow"><a style="color:#ffffff" onclick="FollowOrUnfollow('{{search[i].username}}')"><div id="{{search[i].username}}">Unfollow</div></button>
+          {% else %}
+          <button class="btn btn-primary FollowUnfollow"><a style="color:#ffffff" onclick="FollowOrUnfollow('{{search[i].username}}')"><div id="{{search[i].username}}">Follow</div></button>
+          {% endif %}
+
+        </li>
+      {% endif %}
+
+    {% endfor %}
+  </ul>
+</div>
+{% else %}
+  <p>No results found.</p>
+{% endif %}
+
+
+
+
+{% endblock %}.
+

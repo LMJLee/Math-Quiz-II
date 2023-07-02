@@ -1,0 +1,43 @@
+{% extends "base.html" %}
+{% block title %}
+My followers
+{% endblock %}
+{% block content %}
+<link rel="stylesheet" href="../static/follower.css">
+<script defer src="../static/follow.js"></script>
+<div class="FollowerH1">
+  <h1>Followers</h1>
+</div>
+{% if length > 0 %}
+  <div class="FollowerButtons">
+    <ul style="list-style-type: none;">
+      {% for i in range(length) %}
+
+        {% if followers[i].current_user != current_user.username %}
+          <li>
+            {% if followers[i].current_user in usernames %}
+            <button class="btn btn-light" style="min-width: 100px;"><a style="color:#000000;" href="{{ url_for('auth.profile', username=followers[i].current_user) }}">{{ followers[i].current_user }}</a></button>
+            <button class="btn btn-primary" style="min-width: 100px;"><a style="color:#ffffff" onclick="RemoveCheck('{{followers[i].current_user}}')"><div id="{{followers[i].current_user}}">Remove</div></button>
+            {% else %}
+
+            {% endif %}
+
+          </li>
+        {% endif %}
+
+      {% endfor %}
+    </ul>
+  </div>
+
+{% else %}
+<div class="followerNone">
+  <p>You do not have any followers.</p>
+</div>
+
+{% endif %}
+
+
+
+
+{% endblock %}.
+

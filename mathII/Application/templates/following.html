@@ -1,0 +1,38 @@
+{% extends "base.html" %}
+{% block title %}
+Following
+{% endblock %}
+{% block content %}
+<link rel="stylesheet" href="../static/following.css">
+<script defer src="../static/search.js"></script>
+
+<div class="FollowingH1">
+  <h1>Following</h1>
+</div>
+
+{% if length > 0 %}
+<div class="FollowingButtons">
+  <ul style="list-style-type: none;">
+    {% for i in range(length) %}
+
+      {% if follows[i].username != current_user.username %}
+        <li>
+          {% if follows[i].username in usernames %}
+          <button class="btn btn-light" style="min-width: 100px;" ><a style="color:#000000;" href="{{ url_for('auth.profile', username=follows[i].username) }}">{{ follows[i].username }}</a></button>
+          <button class="btn btn-primary" style="min-width: 90px;"><a style="color:#ffffff" onclick="FollowOrUnfollow('{{follows[i].username}}')"><div id="{{follows[i].username}}">Unfollow</div></button>
+          {% else %}
+          {% endif %}
+        </li>
+      {% endif %}
+    {% endfor %}
+  </ul>
+</div>
+{% else %}
+<div class="followingNone">
+  <p>You are not following any users.</p>
+</div>
+
+{% endif %}
+
+{% endblock %}.
+

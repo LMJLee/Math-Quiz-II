@@ -1,0 +1,55 @@
+{% extends "base.html" %}
+{% block title %}
+My profile
+{% endblock %}
+{% block content %}
+<link rel="stylesheet" href="../static/profile.css">
+<script defer src="../static/search.js"></script>
+
+<body>
+    <div class="profile">
+        <div class="profileHeader">
+            <h1>{{ userQuery.username }}</h1>
+                <div class="profileButton">
+                    <ul style="list-style-type: none;">
+                        <li>
+                        {% if userQuery.username != current_user.username %}
+                            {% if userQuery.username in usernames %}
+                                <button class="btn btn-primary profileCheck" style="min-width: 130px;"><a style="color:#ffffff" onclick="FollowOrUnfollow('{{userQuery.username}}')"><div id="{{userQuery.username}}">Unfollow</div></button>
+                                {% else %}
+                                <button class="btn btn-primary profileCheck" style="min-width: 130px;"><a style="color:#ffffff" onclick="FollowOrUnfollow('{{userQuery.username}}')"><div id="{{userQuery.username}}">Follow</div></button>
+                                {% endif %}
+                            {% else %}
+                            {% endif%}
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        <h2>{{ userQuery.name }}, {{ age }}</h2>
+        <h3>{{ following }} Following {{ followers }} Followers</h3>
+        <h4>Last score submitted {{ last }}</h4>
+    </div>
+
+    <div class="profileLeaderboard" style="margin-top: 20px;">
+        <table class ="table thead-dark">
+            <thead class="thead-dark">
+            <tr align="center">
+                <th>Type</th>
+                <th>Score</th>
+                <th>Date</th>
+            </tr>
+            </thead>
+
+            {% for score in scores %}
+            <tr class="table-light" align="center">
+                <td>{{ score.type }}</td>
+                <td>{{ score.score }}</td>
+                <td>{{ score.date.strftime('%Y-%m-%d %H:%M:%S') }}</td>
+                </tr>
+            {% endfor %}
+        </table>
+    </div>
+</body>
+
+
+{% endblock %}

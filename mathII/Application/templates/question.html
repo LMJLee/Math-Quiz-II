@@ -1,0 +1,37 @@
+{% extends "base.html" %}
+{% block title %}
+Math Quiz
+{% endblock %}
+{% block content %}
+
+    <script defer src="../static/question.js"></script>
+
+    <h4>What is <span id="num1"></span> <span id="index"></span> <span id="num2"></span> ?</h4>
+
+
+    <h5 id="scoreValue" class="fade-text-green fade-text-red">Score<br><span id="score"></span></h5>
+
+
+    <body>
+        <div class="container1">
+            <div class="circular-progress">
+                <div class="value-container"></div>
+            </div>
+        </div>
+    </body>
+
+    <ul class="custom-btn">
+        <li><button type="button" class="btn btn-outline-success btn-xl choices"><span id="option1"></span></button></li>
+        <li><button type="button" class="btn btn-outline-success btn-xl choices"><span id="option2"></span></button></li>
+        <li><button type="button" class="btn btn-outline-success btn-xl choices"><span id="option3"></span></button></li>
+        <li><button type="button" class="btn btn-outline-success btn-xl choices"><span id="option4"></span></button></li>
+    </ul>
+
+
+
+
+
+
+
+
+{% endblock %}.

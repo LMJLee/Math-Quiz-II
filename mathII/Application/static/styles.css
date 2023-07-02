@@ -1,0 +1,340 @@
+/*------------------------------------------LOGIN---------------------------------------------*/
+
+  .login {
+    text-align: center;
+    left: 45%;
+    top: 200px;
+    position: absolute;
+    display: flex;
+  }
+
+  .signup {
+    text-align: center;
+    left: 40%;
+    top: 160px;
+    position: absolute;
+    display: flex;
+  }
+
+
+//*------------------------------------------NAVIGATION---------------------------------------*/
+  .navigation {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+
+  }
+
+
+/*------------------------------------------PROMPT--------------------------------------------*/
+  .promptH3 {
+    left: 50%;
+    position: absolute;
+    top: 250px;
+    transform: translate(-50%, -50%);
+    text-align: center;
+  }
+
+  .promptButtons {
+    position: absolute;
+    top: 50%;
+    left: 48%;
+    transform: translate(-50%, -50%);
+    display: flex;
+    flex-direction: column;
+    gap: 0.25rem;
+    list-style: none;
+  }
+
+  .prompt {
+    min-width: 160px;
+  }
+
+/*------------------------------------------SCORE INDICATOR CIRCLE--------------------------------------------*/
+  .container1 {
+    height: 200px;
+    width: 200px;
+    background-color: #ffffff;
+    position: absolute;
+    transform: translate(-50%, -50%);
+    top: 35%;
+    left: 50%;
+    border-radius: 8px;
+    display:grid;
+    place-items: center;
+
+  }
+
+  .circular-progress{
+    position: relative;
+    height: 190px;
+    width: 190px;
+    background-color: gray;
+    border-radius: 50%;
+    display: grid;
+    place-items: center;
+  }
+
+  .circular-progress:before {
+    content: "";
+    position: absolute;
+    height: 90%;
+    width: 90%;
+    background-color: #ffffff;
+    border-radius: 50%;
+  }
+
+  .value-container {
+    position: relative;
+    font-family: "Poppins", sans-serif;
+    font-size: 30px;
+    font-weight: 560;
+    color: #231c3d;
+  }
+
+/*-----------------------------------------=QUESTION--------------------------------------------*/
+  h4 {
+    font-size: 45px;
+    margin: 0;
+    position: absolute;
+    text-align: center;
+    top: 480px;
+    left: 50%;
+    -ms-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+  }
+
+
+  .custom-btn {
+    position: absolute;
+    top: 600px;
+    left: 50%;
+    -ms-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+    display: flex;
+    gap: 1.25rem;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+  }
+
+  .custom-btn li{
+    flex-shrink: 1;
+
+  }
+
+  .btn-xl {
+    font-size: 35px;
+    border-radius: 10px;
+    min-height: 90px;
+    min-width: 90px;
+  }
+
+  #scoreValue{
+    position: absolute;
+    text-align: center;
+    margin-top: 80px;
+    left: 50%;
+    font-size: 40px;
+    -ms-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+
+    height: 100px;
+
+    justify-content: center;
+  }
+
+  h6 {
+    text-align: center;
+    top: 50px;
+    font-size: 30px;
+  }
+
+  /*                    score text color changes after correct answer                     */
+  .fade-text-green {
+    color: dark-gray;
+  }
+
+  .fade-text-green.animateScoreGreen {
+    animation-name: fade-green;
+    animation-duration: .8s;
+    animation-fill-mode: forwards;
+  }
+
+  @keyframes fade-green {
+    0% {
+      color: dark-gray;
+    }
+    50% {
+      color: #42ba96;
+    }
+    100% {
+      color: dark-gray;
+    }
+  }
+
+  /*                    score text color changes after incorrect answer                     */
+  .fade-text-red {
+    color: dark-gray;
+  }
+
+  .fade-text-red.animateScoreRed {
+    animation-name: fade-red;
+    animation-duration: .8s;
+    animation-fill-mode: forwards;
+  }
+
+  @keyframes fade-red {
+    0% {
+      color: dark-gray;
+    }
+    50% {
+      color: #df4759;
+    }
+    100% {
+      color: dark-gray;
+    }
+  }
+
+  .a {
+    color: green;
+    background-color: transparent;
+    text-decoration: none;
+  }
+
+
+/*-----------------------------------------END PAGE--------------------------------------------*/
+  .endH3 {
+    margin: 0;
+    position: absolute;
+    text-align: center;
+    top: 300px;
+    left: 50%;
+    -ms-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+  }
+
+  .table {
+    margin-top: 30px;
+  }
+
+  .finalscore{
+    margin: 0;
+    position: absolute;
+    top: 400px;
+    left: 50%;
+    -ms-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+  }
+
+  .endbuttons {
+    position: absolute;
+    top: 600px;
+    left: 50%;
+    -ms-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+    display: flex;
+    gap: 2rem;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    flex-direction: row;
+  }
+
+  .custom-btn li{
+    flex-shrink: 1;
+  }
+
+  .XXL {
+    font-size: 20px;
+    border-radius: 5px;
+    min-height: 40px;
+    min-width: 100px;
+  }
+
+/*------------------------------------------SEARCHBOX--------------------------------------------*/
+
+  .searchH3 {
+    left: 50%;
+    position: absolute;
+    top: 330px;
+    left: 50%;
+    -ms-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+  }
+
+  .searchbox {
+    margin: 0;
+    position: absolute;
+    top: 390px;
+    left: 50%;
+    -ms-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+
+  }
+
+/*------------------------------------------SEARCH RESULTS---------------------------------------*/
+
+  .resultBtn {
+    min-width: 100px;
+    min-height: 40px;
+  }
+
+  .FollowUnfollow {
+    min-width: 90px;
+    max-height: 36x;
+  }
+
+  h5 {
+    font-size: 27px;
+  }
+  /* Styles for the title */
+  .resultH1 {
+    text-align: left;
+    margin-bottom: 10px;
+    margin-top: 10px;
+    margin-left: -135px;
+  }
+
+  /* Styles for the result count */
+  .resultH4 {
+    text-align: left;
+    margin-top: 0;
+    margin-left: -135px;
+  }
+
+  /* Styles for the buttons container */
+  .resultButtons {
+    position: absolute;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex;
+    margin-top: 20px;
+    margin-left: -180px;
+  }
+
+  /* Styles for individual result buttons */
+  .resultButtons li {
+    margin: 2px;
+  }
+
+
+/*------------------------------------------LEADERBOARD------------------------------------------*/
+
+  .highScore{
+    margin-top: 20px;
+  }
+
+  h6{
+    font-weight: 600;
+    color: #2e2e2e;
+  }
+
+  body{
+    height: 100vh;
+    background: linear-gradient(
+      #e8f0f7 50%;,
+      #4d5bf9 50%;
+    );
+  }
